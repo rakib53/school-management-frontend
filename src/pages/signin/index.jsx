@@ -1,7 +1,5 @@
-export default function SignIn(){
-    return (
-        <div>
-            <h1>Hello world!</h1>
-        </div>
-    )
+import React from "react";
+
+export default function SignIn() {
+  return <div>this is signup page!</div>;
 }

@@ -1,11 +1,19 @@
-import React from 'react';
-import {RouterProvider } from 'react-router-dom';
-import Router from "./routes/index"
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import SignIn from "./pages/Signin";
+import Signup from "./pages/Signup";
 
-function App() {
+export default function App() {
   return (
-    <RouterProvider router={Router} />
+    <main>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signing" element={<SignIn />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </main>
   );
 }
-
-export default App;
