@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useLoginMutation } from "@features/auth/authApi";
+import { useLoginMutation } from "@redux/features/auth/authApi";
 import { useDispatch } from "react-redux";
-import { setToken, getUserInfo } from "@features/auth/authSlice";
+import { setToken, getUserInfo } from "@redux/features/auth/authSlice";
 import { useNavigate } from "react-router-dom";
 
 export default function SignIn() {
@@ -27,9 +27,7 @@ export default function SignIn() {
     if (!isLoading && signInResponse?.token) {
       dispatch(setToken(signInResponse.token));
       dispatch(getUserInfo(signInResponse?.user));
-      if (signInResponse?.user) {
-        navigate("/");
-      }
+      navigate("/");
     }
     if (!isLoading && isError) {
       setSignInError({

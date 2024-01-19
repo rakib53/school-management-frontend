@@ -14,8 +14,9 @@ const authSlice = createSlice({
       localStorage.setItem("userToken", action.payload);
     },
     logut: (state) => {
+      console.log("Loggin out!");
       state.token = null;
-      state.user = "";
+      state.user = undefined;
       localStorage.removeItem("userToken");
     },
     getUserInfo: (state, action) => {

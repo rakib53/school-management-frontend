@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRegistrationMutation } from "../../redux/features/auth/authApi";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setToken, getUserInfo } from "@features/auth/authSlice";
+import { setToken, getUserInfo } from "@redux/features/auth/authSlice";
 
 export default function Signup() {
   const [user, setUser] = useState({
