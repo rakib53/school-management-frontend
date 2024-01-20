@@ -6,6 +6,7 @@ import SignIn from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Sidebar from "./pages/Sidebar";
 import useAuthCheck from "./hook/useAuthCheck";
+import Attendance from "./pages/Attendance";
 
 export default function App() {
   const isAuth = useAuthCheck();
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/attendance" element={<Attendance />} />
         </Routes>
       </div>
     </main>
