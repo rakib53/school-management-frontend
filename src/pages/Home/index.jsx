@@ -16,7 +16,7 @@ export default function Home() {
         style={{ color: "red", fontWeight: 500 }}
         onClick={() => handleLogut()}
       >
-        Logut!
+        Logout!
       </p>
     </div>
   );
