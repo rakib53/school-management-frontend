@@ -111,16 +111,22 @@ const Sidebar = () => {
               </svg>
               <div className="">
                 {/* <span>{isOpen ? "▼" : "►"}</span> */}
-                <span className={`${styles.navLinks}`}>Students</span>
+                <span className={`${styles.navLinks}`}>Subjects</span>
               </div>
             </div>
             {isOpen && (
               <div className={`${styles.collpaseContentContainer}`}>
-                <Link to={"/subject/class"} className={styles.collapseContent}>
-                  My Class
+                <Link
+                  to={"/subjects/subjectwidget"}
+                  className={styles.collapseContent}
+                >
+                  Subject
                 </Link>
 
-                <Link to={"/subject/note"} className={styles.collapseContent}>
+                <Link
+                  to={"/subjects/notewidget"}
+                  className={styles.collapseContent}
+                >
                   Note
                 </Link>
               </div>
