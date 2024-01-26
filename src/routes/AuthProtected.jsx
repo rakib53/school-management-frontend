@@ -6,7 +6,6 @@ const AuthProtected = ({ children }) => {
   const state = useSelector((state) => state.authSlice);
 
   const { user, token } = state || {};
-  console.log(state);
 
   return !user && !token ? (
     <Navigate to={{ pathname: "/signin", state: { from: location } }} />
