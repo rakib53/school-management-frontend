@@ -6,6 +6,8 @@ import SignIn from "./pages/Signin";
 import Signup from "./pages/Signup";
 import Sidebar from "./pages/Sidebar";
 import useAuthCheck from "./hook/useAuthCheck";
+import SubjectWidget from "./pages/Subject/SubjectWidget";
+import NoteWidget from "./pages/Subject/NoteWidget";
 import CreateAssignment from "@pages/Create_assignment";
 import AuthProtected from "./routes/AuthProtected";
 import Navbar from "./components/Navbar";
