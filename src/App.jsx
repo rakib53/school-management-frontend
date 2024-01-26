@@ -8,10 +8,11 @@ import Sidebar from "./pages/Sidebar";
 import useAuthCheck from "./hook/useAuthCheck";
 import SubjectWidget from "./pages/Subject/SubjectWidget";
 import NoteWidget from "./pages/Subject/NoteWidget";
+import CreateAssignment from "@pages/Create_assignment";
+import AuthProtected from "./routes/AuthProtected";
 
 export default function App() {
   const isAuth = useAuthCheck();
-  console.log(isAuth);
 
   return !isAuth ? (
     <h1>Loading...</h1>
@@ -20,8 +21,25 @@ export default function App() {
       <Sidebar />
       <div className="content-area">
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route
+            exact
+            path="/dashboard"
+            element={
+              <AuthProtected>
+                <Home />
+              </AuthProtected>
+            }
+          />
           <Route path="/about" element={<About />} />
+          <Route path="/assignment" element={<About />} />
+          <Route
+            path="/create-assignment"
+            element={
+              <AuthProtected>
+                <CreateAssignment />
+              </AuthProtected>
+            }
+          />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/subjects/subjectwidget" element={<SubjectWidget />} />
