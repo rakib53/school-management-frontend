@@ -8,7 +8,7 @@ const Sidebar = () => {
     <div className={styles.sidebarWrapper}>
       <div className={styles.sidebarContentWrapper}>
         <div className={styles.sidebarHeaderWrapper}>
-          <Link className={styles.sidebarLogoWrapper} to={"/"}>
+          <Link className={styles.sidebarLogoWrapper} to={"/dashboard"}>
             <img
               className={styles.sidebarLogo}
               src={LOGO}
@@ -134,7 +134,7 @@ const Sidebar = () => {
             <span className={styles.navLinks}>Attendance</span>
           </Link>
 
-          <Link to={"/assignments"} className={styles.sidebabrNavItems}>
+          <Link to={"/create-assignment"} className={styles.sidebabrNavItems}>
             <svg
               stroke="currentColor"
               fill="currentColor"

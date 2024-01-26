@@ -18,6 +18,7 @@ export default function Home() {
       >
         Logut!
       </p>
+      <h1 className="text-green-600">sdsd</h1>
     </div>
   );
 }
