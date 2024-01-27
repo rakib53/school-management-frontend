@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useGetUserInfoQuery } from "@redux/features/auth/authApi";
-import { getUserInfo } from "@redux/features/auth/authSlice";
+import { getUserInfo, logut } from "@redux/features/auth/authSlice";
 
 const useAuthCheck = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -21,6 +21,7 @@ const useAuthCheck = () => {
     }
     if (isError || !token) {
       navigate("/signin");
+      dispatch(logut());
       setIsAuth(true);
     }
   }, [isError, isLoading, token]);
