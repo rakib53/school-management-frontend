@@ -8,6 +8,7 @@ import Sidebar from "./pages/Sidebar";
 import useAuthCheck from "./hook/useAuthCheck";
 import SubjectWidget from "./pages/Subject/SubjectWidget";
 import NoteWidget from "./pages/Subject/NoteWidget";
+import Classlist from "./pages/Classlist";
 
 export default function App() {
   const isAuth = useAuthCheck();
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/classlist" element={<Classlist />} />
           <Route path="/subjects/subjectwidget" element={<SubjectWidget />} />
           <Route path="/subjects/notewidget" element={<NoteWidget />} />
         </Routes>
