@@ -47,6 +47,8 @@ export default function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/classlist" element={<Classlist />} />
+            <Route path="/subjects/subjectwidget" element={<SubjectWidget />} />
+            <Route path="/subjects/notewidget" element={<NoteWidget />} />
           </Routes>
         </div>
       </div>
