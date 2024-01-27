@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import About from "./pages/About";
@@ -11,6 +11,7 @@ import NoteWidget from "./pages/Subject/NoteWidget";
 import CreateAssignment from "@pages/Create_assignment";
 import AuthProtected from "./routes/AuthProtected";
 import Navbar from "./components/Navbar";
+import Classlist from "./pages/Classlist";
 
 export default function App() {
   const isAuth = useAuthCheck();
@@ -45,6 +46,7 @@ export default function App() {
             />
             <Route path="/signup" element={<Signup />} />
             <Route path="/signin" element={<SignIn />} />
+            <Route path="/classlist" element={<Classlist />} />
           </Routes>
         </div>
       </div>
